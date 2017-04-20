@@ -68,15 +68,18 @@ def print_tail(seconds):
     print("last updated "+str(seconds)+" seconds ago")
 
 def send_email(email,body,subject):
+    '''
     server = smtplib.SMTP('mail.twc.com', 587)
     server.starttls()
-    server.login("sjmiller609@twc.com", "35711622")
-    msg = "From: "+"sjmiller609@twc.com\n"
+    server.login("TODO@twc.com", "TODO")
+    msg = "From: "+"TODO@twc.com\n"
     msg += "To: "+email+"\n"
     msg += "Subject: " + subject+"\n\n"
     msg += body
-    server.sendmail("sjmiller609@twc.com", email, msg)
+    server.sendmail("TODO@twc.com", email, msg)
     server.quit()
+    '''
+    pass#TODO: fill in your info
 
 def save(titles,filetail):
     with open(".last_titles"+filetail+".txt","w") as f:
